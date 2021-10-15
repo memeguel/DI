@@ -11,24 +11,39 @@ import javax.swing.JFrame;
  */
 
 class Ventana extends JFrame{
-    public Ventana(){
-        setSize(500, 400);
-        Image imagen=new ImageIcon("JL");
-        setIconImage(imagen);
-        //setLocationRelativeTo(null);
-        
-//        int y=getMaximumSize().height/2;
-//        int x=getMaximumSize().width/2;
-//        setLocation(x, y);
-    }
-}
+        public Ventana(){
+            setSize(500, 400);
+            Image imagen=new ImageIcon(getClass().getResource("../imagenes/icono.png")).getImage();
+            //ImageIcon imagen=new ImageIcon("C:\\Users\\CFGS\\Pictures\\icono.png");
+            setIconImage(imagen.getScaledInstance(100, 50, 0));
+            //setIconImage(imagen.getScaledInstance(WIDTH, HEIGHT, WIDTH));
+            //setIconImage(imagen.getImage());
+            
+            setName("Frame centrado en la ventana");
+            setVisible(true);
+            setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        }
+            
+            
+            //setLocationRelativeTo(null);
 
-public class Ejercicio {
+    //        int y=getMaximumSize().height/2;
+    //        int x=getMaximumSize().width/2;
+    //        setLocation(x, y);
+        }
+
+public class Ejercicio extends JFrame{
+        
+        
+
+    
     public static void main(String[] args) {
-        Ventana ventana1=new Ventana();
-        ventana1.setName("Frame centrado en la ventana");
-        ventana1.setVisible(true);
+        JFrame ventana1=new Ventana();
+        
+        
         
     } //Fin del main
+
+    
 
 } //Fin de la clase Ejercicio
