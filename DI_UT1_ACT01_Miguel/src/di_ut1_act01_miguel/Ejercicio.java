@@ -16,16 +16,18 @@ class Ventana extends JFrame{
             Image imagen=new ImageIcon(getClass().getResource("../imagenes/icono.png")).getImage();
             //ImageIcon imagen=new ImageIcon("C:\\Users\\CFGS\\Pictures\\icono.png");
             setIconImage(imagen.getScaledInstance(100, 50, 0));
-            //setIconImage(imagen.getScaledInstance(WIDTH, HEIGHT, WIDTH));
             //setIconImage(imagen.getImage());
+                
+            //Intento de reescalado de icono
+            //setIconImage(imagen.getScaledInstance(WIDTH, HEIGHT, WIDTH));
             
+            setLocationRelativeTo(null);
             setName("Frame centrado en la ventana");
             setVisible(true);
             setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         }
             
             
-            //setLocationRelativeTo(null);
 
     //        int y=getMaximumSize().height/2;
     //        int x=getMaximumSize().width/2;
