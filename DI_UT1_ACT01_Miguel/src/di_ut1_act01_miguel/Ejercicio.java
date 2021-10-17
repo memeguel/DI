@@ -28,7 +28,7 @@ class Ventana extends JFrame{
         }
             
             
-
+              //Intento de colocar la ventana en el centro
     //        int y=getMaximumSize().height/2;
     //        int x=getMaximumSize().width/2;
     //        setLocation(x, y);
