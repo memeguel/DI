@@ -22,7 +22,7 @@ class Ventana extends JFrame{
             //setIconImage(imagen.getScaledInstance(WIDTH, HEIGHT, WIDTH));
             
             setLocationRelativeTo(null);
-            setName("Frame centrado en la ventana");
+            setTitle("Frame centrado en la ventana");
             setVisible(true);
             setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         }
