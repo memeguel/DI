@@ -23,7 +23,7 @@ public class BoxLayout_parte4 {
         });
     } //Fin del main
     private void inicializarVentana(){
-        JFrame ventana=new JFrame("BoxLayout demo parte 1");
+        JFrame ventana=new JFrame("BoxLayout demo parte 4");
         
         addComponentes(ventana);
         
