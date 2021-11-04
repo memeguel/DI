@@ -1,10 +1,12 @@
 package layouts.boxLayouts;
 
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import javax.swing.*;
-import javax.swing.border.Border;
+import static javax.swing.BorderFactory.createCompoundBorder;
+import static javax.swing.BorderFactory.createEmptyBorder;
+import static javax.swing.BorderFactory.createTitledBorder;
+import static javax.swing.Box.createRigidArea;
 import javax.swing.border.EmptyBorder;
 
 
@@ -41,26 +43,34 @@ public class BoxLayout_parte6 {
         JButton bt3=new JButton("Botón 1",new ImageIcon("src\\imagenes\\middle.gif"));
         JButton bt4=new JButton("Botón 2",new ImageIcon("src\\imagenes\\geek-cght.gif"));
         
+        bt1.setVerticalTextPosition(SwingConstants.CENTER);
+        bt1.setVerticalTextPosition(SwingConstants.BOTTOM);
+        bt2.setHorizontalTextPosition(SwingConstants.CENTER);
+        bt2.setVerticalTextPosition(SwingConstants.BOTTOM);
         
+        bt3.setHorizontalTextPosition(SwingConstants.CENTER);
+        bt3.setVerticalTextPosition(SwingConstants.BOTTOM);
+        bt4.setHorizontalTextPosition(SwingConstants.CENTER);
+        bt4.setVerticalTextPosition(SwingConstants.BOTTOM);
         
         JPanel panel=new JPanel();
         JPanel container1=new JPanel();
         JPanel container2=new JPanel();
         
-        panel.setPreferredSize(new Dimension(650, 600));
-        container1.setPreferredSize(new Dimension(400, 400));
-        container2.setPreferredSize(new Dimension(200, 400));
+        
         
         
         //Añadimos los botones al panel con RigidArea entre ellos
         
         container1.add(bt1);
+        container1.add(createRigidArea(new Dimension(50, 0)));
         container1.add(bt2);
         //container1.add(Box.createHorizontalBox());
         bt3.setAlignmentY(Component.BOTTOM_ALIGNMENT);
         bt4.setAlignmentY(Component.BOTTOM_ALIGNMENT);
         
         container2.add(bt3);
+        container1.add(createRigidArea(new Dimension(50, 0)));
         container2.add(bt4);
         
         panel.add(container1);
@@ -73,8 +83,8 @@ public class BoxLayout_parte6 {
         //Creamos el EmptyBorder
 
         
-        container1.setBorder(BorderFactory.createTitledBorder(new EmptyBorder(20, 50, 20, 50)),"Por defecto"));
-        container2.setBorder(BorderFactory.createTitledBorder("Bottom alignment"));
+        container1.setBorder(createCompoundBorder(createEmptyBorder(20,20,20,20),createTitledBorder("Por defecto")));
+        container2.setBorder(createCompoundBorder(createEmptyBorder(20,20,20,20),createTitledBorder("Bottom Alignment")));
         //Asignamos al panel el Layout creado
         panel.setLayout(box);
         panel.setBorder(new EmptyBorder(20, 50, 20, 50));
